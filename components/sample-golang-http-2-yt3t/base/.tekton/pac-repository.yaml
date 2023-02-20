@@ -1,0 +1,15 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  annotations:
+    appstudio.openshift.io/application: my-app-1
+    appstudio.openshift.io/component: sample-golang-http-2-yt3t
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: sample-golang-http-2-yt3t
+  namespace: flacatus-tenant
+spec:
+  url: https://github.com/pmacik/sample-golang-http-2

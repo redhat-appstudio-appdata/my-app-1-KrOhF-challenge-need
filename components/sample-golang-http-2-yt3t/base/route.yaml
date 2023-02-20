@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: sample-golang-http-2-yt3t
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: sample-golang-http-2-yt3t
+    app.kubernetes.io/part-of: my-app-1
+  name: sample-golang-http-2-yt3t
+  namespace: flacatus-tenant
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: sample-golang-http-2-yt3t
+    weight: 100
+status: {}
