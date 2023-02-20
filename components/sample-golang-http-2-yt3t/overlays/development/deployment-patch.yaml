@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: sample-golang-http-2-yt3t
+  namespace: flacatus-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:146e8d0c8e026269f8f6f51f04269e7df9956383b9900062a6fbfd0e06206b60
+        name: container-image
+        resources: {}
+status: {}
