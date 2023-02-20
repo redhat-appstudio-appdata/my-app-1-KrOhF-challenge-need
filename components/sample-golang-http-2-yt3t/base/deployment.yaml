@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: sample-golang-http-2-yt3t
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:flacatus-tenant-sample-golang-http-2-yt3t
+      - image: quay.io/redhat-appstudio/user-workload@sha256:146e8d0c8e026269f8f6f51f04269e7df9956383b9900062a6fbfd0e06206b60
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
